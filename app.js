@@ -4,7 +4,9 @@ var Express = require('express')
 //  , MongoClient = require('mongodb').MongoClient
   , assert = require('assert')
   , PORT = process.env.PORT || 3000
+  , warroom = require('./warroom-client')
 
+warroom((error, data) => console.log(data));
 //var url = process.env.DATABASE_URI || 'mongodb://localhost:27017/galv-war-room';
 //MongoClient.connect(url, function(err, db) {
 //  assert.equal(null, err);
@@ -12,9 +14,9 @@ var Express = require('express')
 //});
 
 app.get('/', function(request, response){
-  response.send("hit home route")
+  response.send('hit it')
 });
 
-app.listen(PORT, function(request, response){
+app.listen(3000, function(request, response){
   console.log('server is running')
 });
