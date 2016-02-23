@@ -1,8 +1,9 @@
 require('dotenv').config();
 var Express = require('express')
   , app = Express()
-  ,  MongoClient = require('mongodb').MongoClient
-  ,  assert = require('assert')
+  , MongoClient = require('mongodb').MongoClient
+  , assert = require('assert')
+  , PORT = process.env.PORT || 3000
 
 var url = process.env.DATABASE_URI || 'mongodb://localhost:27017/galv-war-room';
 MongoClient.connect(url, function(err, db) {
@@ -11,5 +12,9 @@ MongoClient.connect(url, function(err, db) {
 });
 
 app.get('/', function(request, response){
-  response.send("server is running")
+  response.send("hit home route")
+});
+
+app.listen(PORT, function(request, response){
+  console.log('server is running')
 });
