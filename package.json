@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Billy's Q3 Assessment - server side",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Billy J",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^1.3.0",
+    "axios": "^0.9.1",
+    "dotenv": "^2.0.0",
+    "mongodb": "^2.1.7"
+  }
+}
