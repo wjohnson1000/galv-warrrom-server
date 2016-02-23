@@ -6,6 +6,10 @@
   "scripts": {
     "start": "nodemon app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wjohnson1000/galv-warrrom-server.git"
+  },
   "author": "Billy J",
   "license": "ISC",
   "dependencies": {
